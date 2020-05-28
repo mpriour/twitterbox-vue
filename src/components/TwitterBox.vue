@@ -38,7 +38,7 @@ export default {
     methods:{
         saveTweet(evt){
             if(remaining>=0){
-                storage.append('tweets', this.currentTweet, '|')
+                store.append('tweets', this.currentTweet, '|')
                 this.tweets.unshift(this.currentTweet)
                 this.currentTweet = ''
             }
