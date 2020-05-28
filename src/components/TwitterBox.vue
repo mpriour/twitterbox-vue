@@ -1,7 +1,7 @@
 <template>
     <div class="panel panel-white">
         <label for="tweetArea">Tweet</label>
-        <textarea name="tweetArea" id="tweetArea" :maxlength="maxLength" v-model="currentTweet"></textarea>
+        <textarea name="tweetArea" id="tweetArea" :maxlength="maxLength+50" v-model="currentTweet"></textarea>
         <button class="btn right leader-1" @click.prevent="saveTweet">Submit</button>
         <div class="font-size--1 avenir-light text-left">
             Characters remaining : <span>{{remaining}}</span>
@@ -37,7 +37,7 @@ export default {
     },
     methods:{
         saveTweet(evt){
-            if(!this.exceeds){
+            if(remaining>=0){
                 storage.append('tweets', this.currentTweet, '|')
                 this.tweets.unshift(this.currentTweet)
                 this.currentTweet = ''
