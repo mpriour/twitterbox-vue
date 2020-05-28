@@ -39,13 +39,13 @@ export default {
         saveTweet(evt){
             if(!this.exceeds){
                 storage.append('tweets', this.currentTweet, '|')
-                this.tweets.push(this.currentTweet)
+                this.tweets.unshift(this.currentTweet)
                 this.currentTweet = ''
             }
         }
     },
     mounted(){
-        this.tweets = store.get('tweets').split('|')
+        this.tweets = store.get('tweets')?.split('|').reverse() ?? []
     }
 }
 </script>
