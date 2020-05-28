@@ -1,0 +1,22 @@
+{
+  "name": "twitterbox",
+  "version": "1.0.0",
+  "description": "blah",
+  "private": true,
+  "license": "isc",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build"
+  },
+  "dependencies": {
+    "vue": "^3.0.0-beta.14"
+  },
+  "devDependencies": {
+    "@vue/compiler-sfc": "^3.0.0-beta.14",
+    "calcite-web": "github:Esri/calcite-web#v1.2.5",
+    "eslint": "^7.1.0",
+    "eslint-plugin-vue": "^7.0.0-alpha.4",
+    "sass": "^1.26.5",
+    "vite": "^0.17.0"
+  }
+}
